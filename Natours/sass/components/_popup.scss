@@ -13,16 +13,20 @@
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
+    display: table;
+    overflow: hidden;
   }
 
   &__left {
     width: 33.333333%;
-    float: left;
+    display: table-cell;
   }
 
   &__right {
     width: 66.666667%;
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
   }
 
   &__img {
@@ -31,5 +35,22 @@
   }
 
   &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    // Creating a table
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem; // the default is 1em (1em corresponds to the font-size of the element or 14px in this case)
+    -moz-column-rule: 1px solid $color-grey-light-2;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+    // Hyphenization
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
