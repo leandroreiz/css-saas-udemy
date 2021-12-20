@@ -14,7 +14,10 @@
   --color-grey-dark-3: #333;
   --color-black: #000;
 
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  --line: 1px solid var(--color-grey-light-2);
 }
 
 // Global reset
@@ -50,4 +53,10 @@ body {
   background-repeat: no-repeat;
 
   min-height: 100vh;
+}
+
+// Selection using the primary color for the app
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
