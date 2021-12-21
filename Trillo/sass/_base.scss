@@ -20,6 +20,13 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+// Sass variables to use on media queries
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 58.125em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
 // Global reset
 * {
   margin: 0;
@@ -36,6 +43,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 // Font details and background color
